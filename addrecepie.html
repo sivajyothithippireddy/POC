@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="jumbotron mx-auto col-6">
+        <p>Add Receipe Name</p>
+        <input id="recepiename" placeholder="Add Recepie"><br><br>
+        <textarea  rows="3" cols="40" id="recepiesteps" >
+        </textarea><br><br><br>
+
+        <div id="ingredientformdiv">
+        <input  id="ingredientform"  placeholder="Add Ingridient">
+        <button  class="btn btn-primary" onclick="addingridient()"> Add Ingridient</button><br><br>
+        </div>
+        
+        <button  id="addnewrecepie" onclick="addnewRecepie()" value="Reset">Add New Receipe</button>
+        </div>
+
+
+
+       <div id="display" class="jumbotron mx-auto col-6">
+        <!-- <button  onclick="editRecepies()">EditRecepies</button>
+        <button   onclick="DeleteRecepies()">DeleteRecepies</button> -->
+       </div>
+
+        <script src="./addrecepie.js"></script>
+        <!-- <script src="./jsonobject.js"></script> -->    
+
+    </body>
+</html>
