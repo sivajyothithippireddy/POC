@@ -1,33 +1,37 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link   rel="stylesheet"  href="./receipe.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
 integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     </head>
-    <body>
-        
-        <div class="jumbotron mx-auto col-6">
-        <p>Add Receipe Name</p>
-        <input id="recepiename" placeholder="Add Recepie"><br><br>
-        <textarea  rows="3" cols="40" id="recepiesteps" >
+    <body >
+        <div class="jumbotron mx-auto col-6 middle" >
+            <h2 >The Receipe App</h2> <br> 
+              <div id="search">
+                  <input type="text"  id="searchbar" placeholder="Search">
+                  <button onclick="searchfunction()"  class="button btn-primary">Search</button> <br><br><br>
+                  <button  class="button btn-success" onclick="myFunction()">Add New Receipe</button>
+              </div><br>
+      </div>
+  <form>     
+     <div class="jumbotron mx-auto col-6" id="addReceipeshow" class="para">
+        <!-- <h2 class=" middle">What you want to save Today</h2><br><br> -->
+        <p >Recepie Name:</p> <input id="recepiename" placeholder="Add Recepie"><br><br>
+        <p  >Recepie Preparation: </p> 
+         <textarea  rows="2" cols="40" id="recepiesteps" >
         </textarea><br><br><br>
-
         <div id="ingredientformdiv">
-        <input  id="ingredientform"  placeholder="Add Ingridient">
-        <button  class="btn btn-primary" onclick="addingridient()"> Add Ingridient</button><br><br>
+        <input type="text"  id="ingredientform"  placeholder="Add Ingridient">
+        <button  onclick="addingridient()"  class="button btn-primary"  type="button"> Add Ingridient</button><br><br>
         </div>
-        
-        <button  id="addnewrecepie" onclick="addnewRecepie()" value="Reset">Add New Receipe</button>
+        <button  id="addnewrecepie" onclick="addnewRecepie()"  class="button btn-success"  type="reset">Add Receipe</button>
         </div>
-
-
-
-       <div id="display" class="jumbotron mx-auto col-6">
-        <!-- <button  onclick="editRecepies()">EditRecepies</button>
-        <button   onclick="DeleteRecepies()">DeleteRecepies</button> -->
+    </form>  
+       <div id="display" class=" mx-auto col-6">
        </div>
-
         <script src="./addrecepie.js"></script>
-        <!-- <script src="./jsonobject.js"></script> -->    
 
     </body>
 </html>
